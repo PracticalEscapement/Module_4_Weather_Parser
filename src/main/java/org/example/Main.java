@@ -16,6 +16,14 @@ public class Main {
             double averageTempJanuary = WeatherAnalyzer.averageTemperature(weatherData, Month.JANUARY);
             System.out.println("Average Temperature January: " + averageTempJanuary + " C");
 
+            // Get the number of hot days aka. temp above specified threshold
+            // 27c = 80f
+            System.out.println("Number of Hot Days: " + WeatherAnalyzer.hotDays(weatherData, 28).size());
+
+            
+
+
+
 
         } catch (IOException e) {
             System.err.println("Error reading the CSV file: " + e.getMessage());
