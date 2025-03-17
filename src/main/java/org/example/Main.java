@@ -1,4 +1,5 @@
 package org.example;
+import java.time.Month;
 import java.util.*;
 
 import java.io.IOException;
@@ -10,6 +11,10 @@ public class Main {
             // Load Weather Data for the Year
             List<WeatherData> weatherData = WeatherParser.parseData("src/main/java/org/example/weatherData.csv");
             System.out.println("Successfully loaded " + weatherData.size() + " weather records.");
+
+            // Get the average temp for specified month
+            double averageTempJanuary = WeatherAnalyzer.averageTemperature(weatherData, Month.JANUARY);
+            System.out.println("Average Temperature January: " + averageTempJanuary + " C");
 
 
         } catch (IOException e) {
