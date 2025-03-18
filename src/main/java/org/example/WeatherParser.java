@@ -7,28 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * ## WeatherParser Interface
- *
- * Provides a static method to parse a CSV file containing weather data.
- *
- * ### CSV Format:
- * The CSV file should have a header and the following columns:
- * - Date (format: YYYY-MM-DD)
- * - Temperature (double)
- * - Humidity (double)
- * - Precipitation (double)
- *
- * ### Example CSV:
- * ```
- * Date,Temperature,Humidity,Precipitation
- * 2025-03-01,15.5,72,5.3
- * 2025-03-02,18.2,65,0.0
- * 2025-03-03,10.1,80,12.4
- * ```
- *
- * @see WeatherData
- */
+
 public interface WeatherParser {
 
     /**

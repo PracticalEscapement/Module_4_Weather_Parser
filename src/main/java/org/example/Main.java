@@ -28,9 +28,12 @@ public class Main {
                     System.out.println("Temperature: " + data.temperature() + "C -> " + WeatherAnalyzer.classifyTemperature(data.temperature()))
             );
 
+            // Get the number of rainy days
+            System.out.println("Number of Rainy Days: " + WeatherAnalyzer.countRainyDays(weatherData));
 
-
-
+            // Using text block get the report for the month
+            System.out.println("\n\n");
+            System.out.println(WeatherAnalyzer.generateReport(weatherData, Month.MARCH));
 
 
         } catch (IOException e) {
