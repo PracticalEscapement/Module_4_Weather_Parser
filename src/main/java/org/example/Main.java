@@ -20,7 +20,15 @@ public class Main {
             // 27c = 80f
             System.out.println("Number of Hot Days: " + WeatherAnalyzer.hotDays(weatherData, 28).size());
 
-            
+            // Randomly select 10 data records and use the classifyTemperature method
+            List<WeatherData> dataCopy = new ArrayList<>(List.copyOf(weatherData));
+            Collections.shuffle(dataCopy);
+            List<WeatherData> randomlySelected = new ArrayList<>(dataCopy.subList(0, 10));
+            randomlySelected.forEach(data ->
+                    System.out.println("Temperature: " + data.temperature() + "C -> " + WeatherAnalyzer.classifyTemperature(data.temperature()))
+            );
+
+
 
 
 
